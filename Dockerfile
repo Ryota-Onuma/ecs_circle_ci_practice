@@ -1,15 +1,27 @@
 FROM ruby:2.6.7
+
 RUN apt-get update -qq && apt-get install -y libssl1.1 npm postgresql-client vim
+
 # node のバージョンは16.0.0
 RUN npm install -g n && n 16.0.0
+
 WORKDIR /app
+
 COPY Gemfile /app/Gemfile
+
 COPY Gemfile.lock /app/Gemfile.lock
+
 RUN bundle install
+
 COPY . /app
+
 WORKDIR /app/frontend
+
+# Vueのビルドをして、/public配下に移すことでrailsのviewから読み込めるようにする
 RUN npm install && npm run build && mv dist/bundle.js ../public
+
 WORKDIR /app
+
 COPY entrypoint.sh /usr/bin/
 
 # entrypoint.shの実行権限付与
