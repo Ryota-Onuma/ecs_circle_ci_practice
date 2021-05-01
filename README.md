@@ -3,3 +3,7 @@
 - docker-compose.ymlとDockerfile.devでセッティングした
 ## production環境など
 - Dockerfileのビルド時にVueのファイルをbundleして、それを直接public配下に配置し、表示するようにしている。
+
+## 事前にやったこと
+- Rspecのセットアップ
+- RUbocopのセットアップ
