@@ -4,9 +4,9 @@
   </main>
 </template>
 <script>
-export default {}
+export default {};
 </script>
 <style>
 /* reset css */
-  @import "./src/stylesheets/reset.css";
+@import './src/stylesheets/reset.css';
 </style>

@@ -2,7 +2,7 @@
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "serve": "webpack-cli serve --hot --inline --host 0.0.0.0 --config ./webpack.dev.config.js",
-    "prettier-lint": "prettier --write /**/*.{js,vue,scss,css}"
+    "prettier-lint": "prettier --write **/*.{js,vue,scss,css}"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",

@@ -5,17 +5,15 @@
   </section>
 </template>
 <script>
-export default {
-
-}
+export default {};
 </script>
 <style lang="scss" scoped>
-  #about{
-    width:100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+#about {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>

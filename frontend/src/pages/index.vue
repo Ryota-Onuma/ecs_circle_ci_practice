@@ -6,20 +6,20 @@
   </section>
 </template>
 <script>
-import HelloWorld from "../components/HelloWorld"
+import HelloWorld from '../components/HelloWorld';
 export default {
-  components:{
-    "hello-world": HelloWorld
+  components: {
+    'hello-world': HelloWorld
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-  #index{
-    width:100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+#index {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>

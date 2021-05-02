@@ -1,21 +1,21 @@
-import Vue from "vue";
-import Router from "vue-router";
-import Index from "../pages/index.vue"
-import About from "../pages/about.vue"
+import Vue from 'vue';
+import Router from 'vue-router';
+import Index from '../pages/index.vue';
+import About from '../pages/about.vue';
 Vue.use(Router);
 
 const router = new Router({
-  mode: "history",
+  mode: 'history',
   routes: [
     //ルーティングの設定
     {
-      path: "/",
+      path: '/',
       component: Index
     },
     {
-      path: "/about",
-      component: About,
-    },
-  ],
+      path: '/about',
+      component: About
+    }
+  ]
 });
 export default router;

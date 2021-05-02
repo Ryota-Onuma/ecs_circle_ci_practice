@@ -1,6 +1,9 @@
 FROM ruby:2.6.7
 
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client vim git 
+RUN apt-get update -qq && apt-get install -y libssl1.1 npm postgresql-client vim git
+
+# node のバージョンは16.0.0
+RUN npm install -g n && npm install -g yarn && n 16.0.0
 
 WORKDIR /app
 
