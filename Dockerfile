@@ -11,7 +11,8 @@ COPY Gemfile /app/Gemfile
 
 COPY Gemfile.lock /app/Gemfile.lock
 
-RUN bundle install
+# publicディレクトリが無いとwebpackのビルド時にコピーできない
+RUN bundle install && mkdir -p public
 
 COPY . /app
 
