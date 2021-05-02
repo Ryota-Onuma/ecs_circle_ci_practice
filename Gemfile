@@ -48,7 +48,7 @@ end
 
 gem 'active_model_serializers'
 gem 'dotenv-rails'
-gem 'seed-fu'
 gem 'rails-i18n'
+gem 'seed-fu'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

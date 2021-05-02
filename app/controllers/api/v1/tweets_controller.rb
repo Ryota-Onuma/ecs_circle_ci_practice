@@ -1,5 +1,5 @@
-class Api::V1::TweetsController <  ApplicationApiController
-  before_action :set_tweet, only: [:show, :update, :destroy]
+class Api::V1::TweetsController < ApplicationApiController
+  before_action :set_tweet, only: %i[show update destroy]
 
   # GET /tweets
   def index
@@ -39,13 +39,14 @@ class Api::V1::TweetsController <  ApplicationApiController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_tweet
-      @tweet = Tweet.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def tweet_params
-      params.require(:tweet).permit(:title, :content)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def tweet_params
+    params.require(:tweet).permit(:title, :content)
+  end
 end
