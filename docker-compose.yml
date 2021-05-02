@@ -19,15 +19,18 @@ services:
     depends_on:
       - db
   webpack:
-    image: node:16-alpine3.11 # nodeのversionは16
+    build: 
+      context: ./frontend # Dockerfileのあるディレクトリ
+      dockerfile: Dockerfile.dev # 開発環境用
     command: npm run serve
-    depends_on:
-      - app
     working_dir: "/app/frontend"
     volumes:
-      - .:/app
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
     ports:
       - "3500:3500"
+    depends_on:
+      - app
 
 volumes:
   postgres-data:
