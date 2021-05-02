@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     # API用のルーティングはここに書く
     namespace :v1 do
       get '/health_check' => 'health_checks#health_check'
+      resources :tweets
     end
   end
   root to: 'layouts#index'
