@@ -18,7 +18,7 @@ COPY . /app
 WORKDIR /app/frontend
 
 # Vueのビルドをして、/public配下に移すことでrailsのviewから読み込めるようにする
-RUN npm install && npm run build && mv dist/bundle.js ../public
+RUN npm install && npm run build && mv dist/bundle.js ../public/
 
 WORKDIR /app
 
