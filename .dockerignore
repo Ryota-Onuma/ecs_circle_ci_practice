@@ -2,3 +2,4 @@ Dockerfile.dev
 /frontend/Dockerfile.dev
 /frontend/node_modules
 docker-compose.yml
+/nginx

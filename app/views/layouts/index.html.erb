@@ -1,6 +1,2 @@
 <div id=app></div>
-<% if Rails.env.development? %>
 <%= javascript_include_tag webpack_asset_path('bundle.js') %>
-<% else %>
-  <script type="text/javascript" src="/bundle.js">
-<% end %>

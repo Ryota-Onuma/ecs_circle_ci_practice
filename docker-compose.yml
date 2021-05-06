@@ -40,6 +40,8 @@ services:
     ports:
       - '80:80'
       #socketファイルの共有
+    environment:
+      SERVER_NAME: 'localhost'
     volumes: 
       - sockets:/app/tmp/sockets/
     depends_on: 
